@@ -6,14 +6,10 @@ import java.util.Objects;
 
 @Data
 public class Message {
-    private final Sender sender;
-    private final String content;
+    private Sender sender;
+    private String content;
     private Receiver receiver;
-
-    public Message(Sender sender, String content) {
-        this.sender = Objects.requireNonNull(sender);
-        this.content = Objects.requireNonNull(content);
-    }
+    // private static MessageList messageList;
 
     public Message(Sender sender, String content, Receiver receiver) {
         this.sender = Objects.requireNonNull(sender);
